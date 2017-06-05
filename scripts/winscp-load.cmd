@@ -13,8 +13,8 @@ if defined SERVERS[%i%].FTP_PROTOCOL (
     set key=
   )
 
-  call start "" "%ROOT%\libs\winscp.com" /log="%ROOT%\ftp-load.log" /ini=nul /command ^
-    "open %%SERVERS[%i%].FTP_PROTOCOL%%://%%SERVERS[%i%].FTP_USERNAME%%:%%SERVERS[%i%].FTP_PASSWORD%%@%%SERVERS[%i%].FTP_HOST%%:%%SERVERS[%i%].FTP_PORT%%/%key%" ^
+  call start /min "" "%ROOT%\libs\winscp.com" /log="%ROOT%\ftp-load.log" /logsize=10*20M /ini=nul /command ^
+    "open %%SERVERS[%i%].FTP_PROTOCOL%%://%%SERVERS[%i%].FTP_USERNAME%%:%%SERVERS[%i%].FTP_PASSWORD%%@%%SERVERS[%i%].FTP_HOST%%:%%SERVERS[%i%].FTP_PORT%%/%key% -passive=%%SERVERS[%i%].PASSIVE%%" ^
     "option transfer binary" ^
     "option batch abort" ^
     "option reconnecttime %%SERVERS[%i%].FTP_RECONNECT_TIMEOUT_SECS%%" ^

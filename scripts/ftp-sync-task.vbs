@@ -3,10 +3,7 @@ Set WsShell = CreateObject("WScript.Shell")
 Set SFileSys = CreateObject("Scripting.FileSystemObject")
 path = SFileSys.GetParentFolderName(WScript.ScriptFullName)
 
-'ftp upload data
-WsShell.Run chr(34) & path & "\winscp-upload.cmd" & Chr(34), 0
-'ftp load data
-WsShell.Run chr(34) & path & "\winscp-load.cmd" & Chr(34), 0
+WsShell.Run chr(34) & path & "\ftp-sync-task.cmd" & Chr(34), 0
 
 Set WsShell = Nothing
 

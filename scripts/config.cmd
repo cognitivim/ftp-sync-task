@@ -13,6 +13,8 @@ set SERVERS[0].FTP_PORT=21
 set SERVERS[0].FTP_USERNAME=
 set SERVERS[0].FTP_PASSWORD=
 set SERVERS[0].SSH_HOST_KEY=
+:: enables passive (=on) or active (=off) transfer mode (FTP protocol only)
+set SERVERS[0].PASSIVE=off
 :: sync folders
 set SERVERS[0].REMOTE_UPLOAD_FOLDER=
 set SERVERS[0].REMOTE_LOAD_FOLDER=
