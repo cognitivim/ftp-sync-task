@@ -3,21 +3,31 @@
 ::==========================================================================
 :: CONFIG
 ::==========================================================================
+
+:: SERVERS[0]
+
 :: FTP connection params
-set FTP_PROTOCOL=ftp
-set FTP_HOST=
-set FTP_PORT=21
-set FTP_USERNAME=
-set FTP_PASSWORD=
-set SSH_HOST_KEY=
+set SERVERS[0].FTP_PROTOCOL=ftp
+set SERVERS[0].FTP_HOST=
+set SERVERS[0].FTP_PORT=21
+set SERVERS[0].FTP_USERNAME=
+set SERVERS[0].FTP_PASSWORD=
+set SERVERS[0].SSH_HOST_KEY=
 :: sync folders
-set REMOTE_UPLOAD_FOLDER=
-set REMOTE_LOAD_FOLDER=
-set LOCAL_UPLOAD_FOLDER=
-set LOCAL_LOAD_FOLDER=
+set SERVERS[0].REMOTE_UPLOAD_FOLDER=
+set SERVERS[0].REMOTE_LOAD_FOLDER=
+set SERVERS[0].LOCAL_UPLOAD_FOLDER=
+set SERVERS[0].LOCAL_LOAD_FOLDER=
+
+:: SERVERS[1]
+
+:: ...
+
 ::==========================================================================
+
 :: task scheduler
 set TASK_SCHEDULER_ROOT=gedemin
+:: task options
 set TASK_INTERVAL_MINS=5
 :: ftp options
 set FTP_RECONNECT_TIMEOUT_SECS=30
